@@ -7,7 +7,6 @@ on:
     - master
 
 jobs: 
-  Github-Action-Workflow
   pull: 
     runs-on: ubuntu-latest
     steps:

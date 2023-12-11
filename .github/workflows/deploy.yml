@@ -16,6 +16,6 @@ jobs:
         switches: -avzr --delete --exclude=".git" --exclude=".github"
         path: /
         remote_path: public_html/github_auto/project-git-actions
-        remote_host: 45.76.161.37
+        remote_host: da.jagadhost.com
         remote_user: naizadev
-        remote_password: Rizki002
+        remote_key: eH5jCgOaTuskSIjAeD/i4bbhx5/sV+HsvwOBHHS6h3k

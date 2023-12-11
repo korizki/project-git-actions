@@ -18,4 +18,4 @@ jobs:
         remote_path: public_html/github_auto/project-git-actions
         remote_host: 45.76.161.37
         remote_user: naizadev
-        remote_key: SHA256:lXcU/0eL9kJTxRQZdPI2forF5eRzgx3odQ+34vHBKT4
+        remote_password: Rizki002

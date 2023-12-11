@@ -18,4 +18,4 @@ jobs:
         remote_path: public_html/github_auto/project-git-actions
         remote_host: da.jagadhost.com
         remote_user: naizadev
-        remote_key: eH5jCgOaTuskSIjAeD/i4bbhx5/sV+HsvwOBHHS6h3k
+        remote_key: SHA256:qMhZ/AUtGPaaMM6ydRoLSWtOQ2eP4k43bhfi3tbCOKs

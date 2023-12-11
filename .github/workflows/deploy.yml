@@ -9,7 +9,8 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
-
+    - name: Console the key
+      run: echo ${{secrets.DEPLOY_KEYS}}
     - name: 📂 Sync files
       uses: burnett01/rsync-deployments@4.1
       with:
@@ -18,4 +19,4 @@ jobs:
         remote_path: public_html/github_auto/project-git-actions
         remote_host: da.jagadhost.com
         remote_user: naizadev
-        remote_key: ${{secrets.DEPLOY_KEY}}
+        remote_key: ${{secrets.DEPLOY_KEYS}}

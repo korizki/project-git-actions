@@ -10,8 +10,8 @@ jobs:
   pull: 
     runs-on: ubuntu-latest
     steps:
-      - name: 'Auto Pull Updates / Changes'
-        run: git pull ko_rizki master
+      # - name: 'Auto Pull Updates / Changes'
+      #   run: git pull ko_rizki master
 
       - run: echo "Auto Update list File"
       - name: List File in Repo

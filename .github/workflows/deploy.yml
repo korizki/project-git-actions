@@ -9,21 +9,14 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
-    - name: Start Remote
-      run: ssh naizadev@da.jagadhost.com
-    - name: Entering Passowrd
-      run: Rizki002
-    - name: Change to directory
-      run: cd public_html/github_auto/project-git-actions
-    - name: Check File 
-      run: ls
-    
-    # - name: 📂 Sync files
-    #   uses: burnett01/rsync-deployments@4.1
-    #   with:
-    #     switches: -avzr --delete --exclude=".git" --exclude=".github"
-    #     path: /
-    #     remote_path: public_html/github_auto/project-git-actions
-    #     remote_host: da.jagadhost.com
-    #     remote_user: naizadev
-    #     remote_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMrKGfF6TrRFb1mL3uO3zJzEso1i23BcDMhTK5d2tT9QAsaxoS5r2sJGVUxifw3139qGmzSQzy2Np6T0a8GifTnTxLYuydYplFbE8Yqt1EZHbLi4T/NS/WG5jZGQJnlEbaZQuM/K4rwHlXQ4Sk2gUyZpMUMV4y63R4KZ5DqNmgvvyGbVxIe7lmXblK/tyFTIwSaAzYHY4KQCEtjAMWzJkgns8I/0oXPWWHnZy7g28mytUenvKS8lWClUXzhBQ4Y9J2T1Py9MFUNvtHdKS6xUyiJ1n97DImmpM4Cbj6aWM5ihaDOnf+IuDyWwDTAe0GtdDSyHEWIZvJOLSJOFx9JuUoayjfaQRF0PBdZQiT9L8g/FVN/awsvfnl7LnS5azAUX8cTmEEBOHLQZnjqdeC3ChW3dvfaz1m5GeT8HT8By723fnp3fD1wv6j3b74yCk+ENkgdFZgQyWQPfReazgahskrtDpUlTL+eeeLsXKsJyGRY2ikivOMNBS6WN2hspPTB6YTxBGBAyqCiSqVhM2sib/jxfXiYHPqLU7xnEaFrLfy4oIv45vMUD25YNiU+laT1JNxMmzIOZS9KaqtHcCvotEdMKeMDsI7AkmOGgAwQJDl4hH2qGrG1B8ag75Wm6/lmaisatusaNEUMSgOaH6xDK+XBgi5kiilMJzAu321A4rT1Q== rzk.ramadhan@gmail.com
+    - name: Console secret
+      uses: echo ${{ secrets.DEPLOY_KEY }}
+    - name: 📂 Sync files
+      uses: burnett01/rsync-deployments@4.1
+      with:
+        switches: -avzr --delete --exclude=".git" --exclude=".github"
+        path: /
+        remote_path: public_html/github_auto/project-git-actions
+        remote_host: da.jagadhost.com
+        remote_user: naizadev
+        remote_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMrKGfF6TrRFb1mL3uO3zJzEso1i23BcDMhTK5d2tT9QAsaxoS5r2sJGVUxifw3139qGmzSQzy2Np6T0a8GifTnTxLYuydYplFbE8Yqt1EZHbLi4T/NS/WG5jZGQJnlEbaZQuM/K4rwHlXQ4Sk2gUyZpMUMV4y63R4KZ5DqNmgvvyGbVxIe7lmXblK/tyFTIwSaAzYHY4KQCEtjAMWzJkgns8I/0oXPWWHnZy7g28mytUenvKS8lWClUXzhBQ4Y9J2T1Py9MFUNvtHdKS6xUyiJ1n97DImmpM4Cbj6aWM5ihaDOnf+IuDyWwDTAe0GtdDSyHEWIZvJOLSJOFx9JuUoayjfaQRF0PBdZQiT9L8g/FVN/awsvfnl7LnS5azAUX8cTmEEBOHLQZnjqdeC3ChW3dvfaz1m5GeT8HT8By723fnp3fD1wv6j3b74yCk+ENkgdFZgQyWQPfReazgahskrtDpUlTL+eeeLsXKsJyGRY2ikivOMNBS6WN2hspPTB6YTxBGBAyqCiSqVhM2sib/jxfXiYHPqLU7xnEaFrLfy4oIv45vMUD25YNiU+laT1JNxMmzIOZS9KaqtHcCvotEdMKeMDsI7AkmOGgAwQJDl4hH2qGrG1B8ag75Wm6/lmaisatusaNEUMSgOaH6xDK+XBgi5kiilMJzAu321A4rT1Q== rzk.ramadhan@gmail.com

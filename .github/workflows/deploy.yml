@@ -10,7 +10,9 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
     - name: Console the key
-      run: echo ${{ secrets.NEW_SECRET_KEY }}
+      run: |
+        echo "My secret key is ${{ secrets.NEW_SECRET_KEY }}"
+        env
     - name: 📂 Sync files
       uses: burnett01/rsync-deployments@4.1
       with:

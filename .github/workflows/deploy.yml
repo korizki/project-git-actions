@@ -17,4 +17,4 @@ jobs:
         host: da.jagadhost.com
         user: naizadev
         pass: Rizki002
-        command: ls
+        command: cd domains && cd naizadevelopment.my.id && cd public_html && cd github_auto && cd project-git-actions && git pull origin master

@@ -17,4 +17,4 @@ jobs:
         host: da.jagadhost.com
         user: naizadev
         pass: Rizki002
-        command: echo "Success"
+        command: ls

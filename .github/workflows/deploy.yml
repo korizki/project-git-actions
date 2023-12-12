@@ -14,9 +14,9 @@ jobs:
     - name: 📂 Remote Sync files
       uses: fifsky/ssh-action@master
       with: 
-        host: da.jagadhost.com
-        user: naizadev
-        pass: Rizki002
+        host: ${{ secrets.REMOTE_HOST }}
+        user: ${{ secrets.REMOTE_USER }}
+        pass: ${{ secrets.REMOTE_PASS }}
         command: |
           cd domains 
           cd naizadevelopment.my.id 

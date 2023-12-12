@@ -16,5 +16,5 @@ jobs:
       with: 
         host: da.jagadhost.com
         user: naizadev
-        key: ${{ secrets.DEPLOY_KEY}}
+        pass: Rizki002
         command: echo "Success"
